@@ -65,3 +65,33 @@ h1,h2,h3{
     border: 1px solid #748e78;
     border-radius: 10px;
 }
+
+body.alto-contraste{
+    --fundo: #000000;
+    --superficie: #000000;
+    --texto: #ffffff;
+    --destaque: #ffff00;
+    --cor-foco: #00ffff;
+}
+
+html.texto-grande{
+    font-size: 125%;
+}
+
+@media (prefers-reduced-motion: reduce){
+    *,
+    *::before,
+    *::after{
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+html.reduzir-movimento *,
+html.reduzir-movimento *::before,
+html.reduzir-movimento *::after{
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
