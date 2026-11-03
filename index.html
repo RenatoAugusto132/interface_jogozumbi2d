@@ -10,60 +10,86 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-    <a href = "#conteudo" class = visually-hidden focusable 
-    link-light p-3>
-        Ir para o conteúdo
+    <a href = "#principal" class = "skip-link">
+        Pular para o conteúdo principal
     </a>
 
-    <header class = "navbar navbar-expand bg-dark"
-            data bs-theme = "dark">    
+    <header class = "site-header">    
         
-        <nav class = "container" aria-label = "Navegação principal">   
-            <a class = "navbar-brand fw-bold" href = "#menu">
-                Jogo Zumbi 2D
-            </a>
+        <nav class = "navbar navbar-expand-md navbar-dark" aria-label="Navegacao principal">  
+            <div class="container">
+                <a class = "navbar-brand fw-bold" href = "#menu">
+                    Jogo Zumbi 2D
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao" aria-controls="menuNavegacao"
+                 aria-expanded="false" aria-label="Abrir ou fechar menu">
+                 <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuNavegacao">
+                    <ul class="navbar-nav ms-auto gap-md-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#historia">
+                                Historia
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#como-jogar">
+                                Como Jogar
+                            </a>
+                        </li>
+                    </ul>
+                    <button type="button" id="botao-contraste" class="btn btn-outline-light ms-md-3 mt-3 mt-md-0">
+                        Alto contraste: Desativado
+
+                    </button>
+                </div>
+            </div> 
         </nav>
     </header>
 
-    <main id = "conteudo" class = "container py-5">
-        <section id = "menu"aria-labelledby = "titulo-jogo">
-            <div class="row justify-content-center">
-                <div class = "col-12 col-md-9 col-lg-7">
-                    
-                    <div class = "text-center mb-4">
-                        <h1 id = "titulo-jogo">
+    <main id = "principal">
+        <section id = "Inicio" class="hero py-5" aria-labelledby="titulo-principal">
+            <div class="container">
+                <div class = "row justify-content-center">
+                    <div class = "col-12 col-lg-9 text-center py-4">
+                        <h1 id="titulo-principal" class="display-4 fw-bold">
                             Jogo Zumbi 2D
-                        </h1>
-
-                        <p>
-                            Você foi levado ao futuro.
-                            Sobreviva a cinco ondas de zumbis
-                            e enfrente o Boss final.
+                        </H1>
+                        <p id = "destaque fw-bold">
+                            SOBREVIVA AO APOCALIPSE
                         </p>
-
-
-                    </div>
-
-                    <div class = "d-grid gap-3 mb-5">
-                        <button id = "btn-iniciar" 
-                                type = "button"
-                                class = "btn btn-primary btn-lg">
-                            Iniciar partida
-                        </button>
-
-                        <a href = "#configuracoes" 
-                            class = "btn btn-outline-light btn-lg">
-                            Configurações de acessbilidade
+                        <p class="lead my-4">
+                            Você foi levado ao futuro,
+                            onde a Terra foi dominada
+                            por zumbis.
+                        </p>
+                         <a href="#como-jogar"
+                           class="btn btn-tema btn-lg">
+                           Como jogar
                         </a>
-                        
+
                     </div>
                 </div>
             </div>
+
+            
         </section>
+
+
+    </main>
+    <p id="mensagem-sistema"
+    class="visually-hidden"
+     role="status"
+    aria-live="polite"></p>
 
 
 
@@ -74,6 +100,6 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-        <script src="js/app.js"></script>
+        <script src="/script.js"></script>
 </body>
 </html>
