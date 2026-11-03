@@ -1,0 +1,67 @@
+:root{
+    --fundo: #151f1b;
+    --superficie: #25352c;
+    --texto: #f5f5ef;
+    --destaque: #c7e6b8;
+    --texto-botao:#142218;
+    --borda: #91ae95;
+    --foco: #ffdc73;
+}
+
+body{
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: arial,sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.site-header{
+    background: var(--superficie);
+    border-bottom: 1px solid var(--borda);
+}
+
+.navbar .navbar-brand, .navbar .nav-link{
+    color: var(--texto);
+}
+
+.navbar .nav-link:hover{
+    color: var(--destaque);
+}
+
+.hero{
+    background: var(--fundo);
+    border-bottom: 1px solid var(--borda);
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+}
+
+.destaque{
+    color: var(--destaque);
+    letter-spacing: 0.06em;
+}
+
+h1,h2,h3{
+    color: var(--texto);
+}
+
+.btn-tema{
+    background: var(--destaque);
+    color: var(--texto-botao);
+    border: 2px solid var(--destaque);
+    font-weight: 700;
+    min-height: 48px;
+}
+.btn-tema:hover{
+    background: #e3f5dc;
+    color: #142218;
+    border-color: #e3f5dc;
+}
+
+.card-zumbi{
+    background: var(--superficie);
+    color:var(--texto);
+    border: 1px solid #748e78;
+    border-radius: 10px;
+}
