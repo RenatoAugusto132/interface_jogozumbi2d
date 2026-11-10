@@ -75,7 +75,7 @@ body.alto-contraste{
 }
 
 html.texto-grande{
-    font-size: 125%;
+    font-size: 150%;
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -88,10 +88,3 @@ html.texto-grande{
     }
 }
 
-html.reduzir-movimento *,
-html.reduzir-movimento *::before,
-html.reduzir-movimento *::after{
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-}
