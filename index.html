@@ -1,172 +1,193 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo Zumbi 2D</title>
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-        crossorigin="anonymous">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/style.css">
+    <title>Início | Jogo Zumbi 2D</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-    <!--
-    <a href = "#principal" class = "skip-link">
-        Pular para o conteúdo principal
-    </a>
--->
 
-    <header class = "site-header">    
-        
-        <nav class = "navbar navbar-expand-md navbar-dark" aria-label="Navegacao principal">  
+    <header class="site-header">
+
+        <nav class="navbar navbar-expand-lg navbar-dark"
+             aria-label="Navegação principal">
+
             <div class="container">
-                <a class = "navbar-brand fw-bold" href = "#menu">
+
+                <a class="navbar-brand fw-bold"
+                   href="./index.html">
                     Jogo Zumbi 2D
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao" aria-controls="menuNavegacao"
-                 aria-expanded="false" aria-label="Abrir ou fechar menu">
-                 <span class="navbar-toggler-icon"></span>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuNavegacao"
+                    aria-controls="menuNavegacao"
+                    aria-expanded="false"
+                    aria-label="Abrir ou fechar menu">
+
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="menuNavegacao">
-                    <ul class="navbar-nav ms-auto gap-md-3">
+
+                <div class="collapse navbar-collapse"
+                     id="menuNavegacao">
+
+                    <ul class="navbar-nav ms-auto gap-lg-3">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#inicio">
-                                Inicio
+                            <a class="nav-link active"
+                               aria-current="page"
+                               href="./index.html">
+                                Início
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#historia">
-                                Historia
+                            <a class="nav-link"
+                               href="./historia.html">
+                                História
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#como-jogar">
-                                Como Jogar
+                            <a class="nav-link"
+                               href="./como-jogar.html">
+                                Como jogar
                             </a>
                         </li>
+
                     </ul>
-                    <!--
-                    <button type="button" id="botao-contraste" class="btn btn-outline-light ms-md-3 mt-3 mt-md-0">
-                        Alto contraste: Desativado
-                    -->
-                    </button>
                 </div>
-            </div> 
+            </div>
         </nav>
     </header>
 
-    <main id = "principal">
-        <section id = "Inicio" class="hero py-5" aria-labelledby="titulo-principal">
+    <main id="principal">
+
+        <section id="inicio"
+                 class="hero py-5"
+                 aria-labelledby="titulo-principal">
+
             <div class="container">
-                <div class = "row justify-content-center">
-                    <div class = "col-12 col-lg-9 text-center py-4">
-                        <h1 id="titulo-principal" class="display-4 fw-bold">
-                            Jogo Zumbi 2D
-                        </H1>
-                        <p id = "destaque fw-bold">
+
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-9
+                                text-center py-4">
+
+                        <p class="destaque fw-bold">
                             SOBREVIVA AO APOCALIPSE
                         </p>
-                        <p class="lead my-4">
-                            Você foi levado ao futuro,
-                            onde a Terra foi dominada
-                            por zumbis.
-                        </p>
-                         <a href="#como-jogar"
-                           class="btn btn-tema btn-lg">
-                           Como jogar
-                        </a>
+
+                        <h1 id="titulo-principal"
+                            class="display-4 fw-bold">
+                            Jogo Zumbi 2D
+                        </h1>
+
+                        
+
+                        <div class="d-flex flex-wrap
+                                    justify-content-center
+                                    gap-3">
+
+                            <a href="./como-jogar.html"
+                               class="btn btn-tema btn-lg">
+                                Como jogar
+                            </a>
+
+                            <a href="./historia.html"
+                               class="btn btn-outline-light btn-lg">
+                                Conheça a história
+                            </a>
+
+                        </div>
 
                     </div>
                 </div>
             </div>
-
-            
         </section>
 
-        <section 
-        id="configuracoes"
-        aria-labelledby="titulo-configuracoes"
-        class="my-5">
+        <section id="configuracoes"
+                 class="container py-5"
+                 aria-labelledby="titulo-configuracoes">
 
+            <h2 id="titulo-configuracoes" class="mb-3">
+                Configurações de acessibilidade
+            </h2>
 
-        <h2 id="titulo-configuracoes" class="mb-4">
-            Configurações de acessibilidade
+            <p>
+                Personalize a apresentação do site
+                de acordo com suas preferências.
+            </p>
 
-        </h2>
+            <div class="card card-zumbi">
+                <div class="card-body p-4">
 
-        <div class="card card-zumbi">
-            <div class="card-body">
-                
-                <div class="form-check form-switch mb-4">
-                    <input 
-                        type="checkbox" 
-                        class="form-check-input" 
-                        role="switch"
-                        id="alto-contraste">
+                    <div class="form-check form-switch mb-4">
 
-                    <label 
-                    for="alto-contraste"
-                    class="form-check-label">
-                        Ativar alto contraste
-                    </label>
+                        <input
+                            type="checkbox"
+                            class="form-check-input"
+                            role="switch"
+                            id="alto-contraste">
+
+                        <label class="form-check-label"
+                               for="alto-contraste">
+                            Ativar alto contraste
+                        </label>
+
+                    </div>
+
+                    <div class="form-check form-switch">
+
+                        <input
+                            type="checkbox"
+                            class="form-check-input"
+                            role="switch"
+                            id="texto-grande">
+
+                        <label class="form-check-label"
+                               for="texto-grande">
+                            Ativar texto grande
+                        </label>
+
+                    </div>
+
                 </div>
-
-                <div class="form-check form-switch mb-4">
-                    <input 
-                        type="checkbox" 
-                        class="form-check-input" 
-                        role="switch"
-                        id="texto-grande">
-
-                    <label 
-                    for="texto-grande"
-                    class="form-check-label">
-                        Ativar tamanho do texto grande
-                    </label>
-                </div>
-
-                <div class="form-check form-switch">
-                    <input 
-                        type="checkbox" 
-                        class="form-check-input" 
-                        role="switch"
-                        id="reduzir-movimento">
-
-                    <label 
-                    for="reduzir-movimento"
-                    class="form-check-label">
-                        Reduzir animações
-                    </label>
-                </div>
-
-
-                    </label>
-                </div>
-
-
             </div>
         </section>
 
-
     </main>
-    <p id="mensagem-sistema"
-    class="visually-hidden"
-     role="status"
-    aria-live="polite"></p>
 
-
-
-
+    <footer class="site-header py-4">
+        <div class="container text-center">
+            <p class="mb-0">
+                ZUMBI!!!
+            </p>
+        </div>
+    </footer>
 
     <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
 
-        <script src="/script.js"></script>
+    <script src="./script.js"></script>
+
 </body>
 </html>
