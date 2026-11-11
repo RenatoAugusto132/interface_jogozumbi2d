@@ -86,5 +86,80 @@ html.texto-grande{
         transition-duration: 0.001ms !important;
         scroll-behavior: auto !important;
     }
+
+    .camada-zumbi {
+        display: none;
+    }
 }
 
+
+
+.camada-zumbi {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+.zumbi-animado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    opacity: 0.65;
+    will-change: transform;
+}
+
+
+.site-header,
+main,
+footer {
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero {
+    background: transparent;
+}
+
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 76px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-align: center;
+    white-space: normal;
+    border-radius: 12px;
+}
+
+
+.btn-download:focus-visible {
+    outline: 3px solid var(--foco) !important;
+    outline-offset: 4px;
+}
+
+
+@media (max-width: 575.98px) {
+    .btn-download {
+        min-height: 64px;
+        font-size: 1.1rem;
+    }
+}
+
+
+video {
+    display: block;
+    max-width: 100%;
+}
