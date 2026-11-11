@@ -8,9 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     
-    const quantidadeZumbis = 4;
+    const zumbisIniciais = 4;
+    const maximoZumbis = 12;
+
+
+    const intervaloAumento = 30000;
+    const zumbisPorIntervalo = 1;
+
     const tamanhoZumbi = 80;
     const zumbis = [];
+    
 
     
     function sortear(min, max) {
@@ -85,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         camada.appendChild(imagem);
 
-        // Cada zumbi possui propriedades próprias
+        
         const zumbi = {
             elemento: imagem,
             x: 0,
@@ -101,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return zumbi;
     }
 
-    // Movimenta um zumbi
+    
     function atualizarZumbi(zumbi, dt) {
 
         zumbi.x += zumbi.dx * zumbi.velocidade * dt;
@@ -110,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const largura = window.innerWidth;
         const altura = window.innerHeight;
 
-        // Verifica se o zumbi está dentro da tela
+        
         const visivel =
             zumbi.x + tamanhoZumbi > 0 &&
             zumbi.x < largura &&
@@ -121,12 +128,12 @@ document.addEventListener("DOMContentLoaded", () => {
             zumbi.entrouNaTela = true;
         }
 
-        // Muda de rota somente após sair da tela
+        
         if (zumbi.entrouNaTela && !visivel) {
             novaRota(zumbi);
         }
 
-        // Rotação conforme a direção
+        
         const angulo = Math.atan2(
             zumbi.dy,
             zumbi.dx
@@ -137,12 +144,49 @@ document.addEventListener("DOMContentLoaded", () => {
              rotate(${angulo}deg)`;
     }
 
-    // Cria os zumbis automaticamente
-    for (let i = 0; i < quantidadeZumbis; i++) {
-        zumbis.push(criarZumbi());
-    }
+    
+        const inicioSessao = Date.now();
 
-    // Anima todos os zumbis continuamente
+        
+        function atualizarQuantidadeZumbis() {
+
+            const tempoDecorrido = Date.now() - inicioSessao;
+
+            
+            const intervalosPassados = Math.floor(
+                tempoDecorrido / intervaloAumento
+            );
+
+            
+            const quantidadeDesejada = Math.min(
+                maximoZumbis,
+                zumbisIniciais +
+                intervalosPassados * zumbisPorIntervalo
+            );
+
+            
+            while (zumbis.length < quantidadeDesejada) {
+                zumbis.push(criarZumbi());
+            }
+        }
+
+        
+        atualizarQuantidadeZumbis();
+
+        
+       
+        const temporizadorZumbis = setInterval(() => {
+
+            atualizarQuantidadeZumbis();
+
+           
+            if (zumbis.length >= maximoZumbis) {
+                clearInterval(temporizadorZumbis);
+            }
+
+        }, 1000);
+
+    
     let ultimoTempo = null;
 
     function animar(tempoAtual) {
@@ -165,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(animar);
     }
 
-    // Inicia automaticamente ao carregar a página
+    
     requestAnimationFrame(animar);
 
 });

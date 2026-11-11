@@ -91,10 +91,6 @@ html.texto-grande{
         transition-duration: 0.001ms !important;
         scroll-behavior: auto !important;
     }
-
-    .camada-zumbi {
-        display: none;
-    }
 }
 
 
@@ -171,11 +167,11 @@ video {
 
 /* ================================
    PÁGINA DE HISTÓRIA
-
+================================ */
 /* Seção principal da história */
 .story-section {
     padding: 70px 0;
-    background: var(--fundo);
+    background: transparent;
 }
 
 /* Título das seções */
@@ -225,7 +221,7 @@ video {
    */
 
 #cronologia {
-    background: var(--superficie) !important;
+    background: transparent !important;
     border-top: 1px solid var(--borda);
     border-bottom: 1px solid var(--borda);
 }
